@@ -1,0 +1,6 @@
+<div class="row p-2">
+    <h4 class="fw-normal py-2 ">Elenco task</h4>
+    <div class="col-4 p-3" *ngFor="let todo of todos">
+        <app-todo-item [todo]="todo"></app-todo-item>
+    </div>
+</div>

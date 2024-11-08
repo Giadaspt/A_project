@@ -1,0 +1,36 @@
+<div class="row">
+  <h4 class="fw-normal py-2">Aggiungi task</h4>
+  <form>
+    <div>
+      <label class="form-label">Descrizione</label>
+      <input
+        type="text"
+        [className]="getInputClass()"
+        class="form-control"
+        placeholder="e.g Task 1"
+        #desc
+      />
+      <p>{{formError.descErrorMsg}}</p>
+    </div>
+    <div>
+      <label class="form-label">Priorità</label>
+      <input
+        type="number"
+        [className]="getInputClass()"
+        class="form-control"
+        placeholder="e.g 2"
+        #priority
+      />
+      <p>{{formError.priorityErrorMesg}}</p>
+    </div>
+
+
+    <button
+      class="btn btn-primary my-4"
+      type="button"
+      (click)="onAddTodo(desc, priority)"
+    >
+      Aggiungi
+    </button>
+  </form>
+</div>
